@@ -143,12 +143,12 @@ const SHOP = [
 ];
 
 async function main() {
-  const conn = await mysql.createConnection({
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || 'root',
-    password: process.env.DB_PASSWORD || '',
-    database: process.env.DB_NAME || 'econquest',
-    port: Number(process.env.DB_PORT) || 3306,
+  const conn = await mysql.createConnection(process.env.MYSQL_URL || {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: Number(process.env.DB_PORT),
     multipleStatements: true,
   });
 
