@@ -18,11 +18,11 @@ const achievementRoutes = require('./routes/achievementRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
+const clientUrl = process.env.CLIENT_URL;
 
 app.use(
   cors({
-    origin: clientUrl,
+    origin: 'https://strong-faloodeh-21dd44.netlify.app',
     credentials: true,
   })
 );
