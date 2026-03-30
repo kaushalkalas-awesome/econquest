@@ -1,6 +1,7 @@
 /** App-wide constants and labels */
 
-export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+// export const API_URL = import.meta.env.VITE_API_URL;
+export const API_URL = 'https://econquest-production.up.railway.app';
 
 export const CATEGORY_LABELS = {
   ALL: 'All',
