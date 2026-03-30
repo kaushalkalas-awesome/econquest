@@ -98,6 +98,7 @@ async function submitChallenge(req, res, next) {
 
 async function getDaily(req, res, next) {
   try {
+    console.log(req.url)
     await regenLivesIfNeeded(req.user.userId);
     const today = new Date().toISOString().slice(0, 10);
     const [existing] = await pool.query(
